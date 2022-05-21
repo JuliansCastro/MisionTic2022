@@ -1,0 +1,1 @@
+web: gunicorn g6Project.wsgi

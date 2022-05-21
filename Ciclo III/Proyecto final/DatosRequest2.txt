@@ -1,0 +1,17 @@
+>>>>>>>>>>>>>>Datos request:  <QueryDict: {'csrfmiddlewaretoken': ['sVr5jHPtB1968sDIqcsKSHsCzh8tSsmr4zBUoyQf4cl6U4EL1iijbg9Xm9W8MlIh'], 'fecha_ingreso': ['2021-10-29'], 'fecha_vencimiento': ['2021-10-21'], 'precio_compra': ['2000'], 'precio_venta': ['5000'], 'miscelanea.nit': ['789456'], 'miscelanea.nombre_misc': ['La esperanza'], 'miscelanea.direccion_misc': ['AV esperanza'], 'producto.nombre_prod': ['Lápiz pastell'], 'producto.descripcion': ['Color sangría, Faber Castell'], 'cantidad': ['3']}>
+>>>>>>>>>>>>>>Serializer:  InventarioSerializerCreate(data=<QueryDict: {'csrfmiddlewaretoken': ['sVr5jHPtB1968sDIqcsKSHsCzh8tSsmr4zBUoyQf4cl6U4EL1iijbg9Xm9W8MlIh'], 'fecha_ingreso': ['2021-10-29'], 'fecha_vencimiento': ['2021-10-21'], 'precio_compra': ['2000'], 'precio_venta': ['5000'], 'miscelanea.nit': ['789456'], 'miscelanea.nombre_misc': ['La esperanza'], 'miscelanea.direccion_misc': ['AV esperanza'], 'producto.nombre_prod': ['Lápiz pastell'], 'producto.descripcion': ['Color sangría, Faber Castell'], 'cantidad': ['3']}>):
+    codigo_barras = IntegerField(read_only=True)
+    fecha_ingreso = DateField(label='Fecha_ingreso', required=False)
+    fecha_vencimiento = DateField(label='Fecha_vencimiento')
+    precio_compra = DecimalField(decimal_places=2, label='Precio_compra', max_digits=10)
+    precio_venta = DecimalField(decimal_places=2, label='Precio_venta', max_digits=10)
+    miscelanea = MiscelaneaSerializer():
+        nit = IntegerField(max_value=2147483647, min_value=-2147483648, validators=[<UniqueValidator(queryset=Miscelanea.objects.all())>])
+        nombre_misc = CharField(label='Nombre_miscelanea', max_length=45)
+        direccion_misc = CharField(label='Direccion_miscelanea', max_length=150, validators=[<UniqueValidator(queryset=Miscelanea.objects.all())>]) 
+    producto = ProductoSerializer():
+        id = IntegerField(read_only=True)
+        nombre_prod = CharField(label='Nombre', max_length=45)
+        descripcion = CharField(label='Descripción', max_length=200, style={'base_template': 'textarea.html'})
+    cantidad = IntegerField(max_value=2147483647, min_value=-2147483648, required=False)
+Bad Request: /inventario/create

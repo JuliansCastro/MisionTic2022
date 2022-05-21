@@ -1,0 +1,128 @@
+[Grabaciones de clases]:                    https://drive.google.com/drive/folders/1Dn2ZN6G9rrdubgMYwTohoJHO1L00s_5b
+
+Get-ExecutionPolicy --> Restricted, AllSigned, RemoteSigned, Unrestricted
+
+link: https://www.sciencedirect.com/topics/computer-science/execution-policy
+
+# Comandos terminal:
+[Crear entorno virtual]:                    python -m venv env
+[Iniciar entorno virtual]:                  env\Scripts\activate
+[Cerrar entorno virtual]:                   deactivate
+
+
+[Instalar django]:                          pip install django
+[Instalar rest framework django]:           pip install djangorestframework
+
+django-admin startproject authProject
+
+django-admin startapp authApp
+
+[Instalar djangorestframework-simplejwt]:		pip install djangorestframework-simplejwt
+[Instalar deplying guinicorn]:             pip install gunicorn
+[Instalar django-heroku]:                  pip install django-heroku
+
+
+
+[Instalar administrador de datos postgres]: pip install psycopg2
+[Crear migraciones]:                        python manage.py makemigrations authApp
+python manage.py makemigrations g6App
+[Aplicar migraciones]:                      python manage.py migrate
+[Correr app]:                               python manage.py runserver
+[Ver versiones de los paquetes]:            pip freeze
+
+#Deploy Heroku cmd - Install Heroku CLI
+#https://dashboard.heroku.com/apps/banco-p51/deploy/heroku-git
+https://banco-p51.herokuapp.com/
+[Heroku login]:                             heroku login
+[Ingresar a la carpeta del proyecto]:       cd C:\Users\Usuario\Documents\Python\Ciclo3MisionTIC\proy_banco
+[Agregar todos los cambios- git]:           git add .
+[Agregar commit]:                           git commit -am "make it better"
+[Empujar cambios a rama principal]:         git push heroku master
+
+
+
+[En archivo settings.py]: 
+
+# PRUEBA DB Heroku Postgresql - Julian
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd1slrnitsfola4',
+        'USER': 'xaqyachlpmilvr',
+        'PASSWORD': 'abe5dd1ae89c64c500d25f115509c6e0b90ec3ea1abeb6d408bac6da2512fe5b',
+        'HOST': 'ec2-34-205-217-14.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+'''
+
+#PRUEBAS CREACION DE EMPLEADOS
+#CREATE EMPLEADO 1
+
+{
+    "id": "5",
+    "username": "julianscastro",
+    "nombre": "Julian",
+    "apellido": "Castro",
+    "cedula": "25563006",
+    "email": "juacastropa@unal.edu.co",
+    "password": "pbkdf2_sha256$260000$mMUj0DrIK6vgtdIYepkIxN$z7Jk9Cw0+Aar7ZCFTrNN2OJt/OqEbmD544EkD6XiQAk=",
+    "create_time": "2021-10-18 13:32:00+00",
+    "miscelanea": {
+        "nit": "25367097",
+        "nombre_misc": "Pepe.com",
+        "direccion_misc": "Carrera 30 #26-01"
+    }
+}
+
+
+#CREATE EMPLEADO MODO 2
+{
+    "id": "5",
+    "username": "julianscastro",
+    "nombre": "Julian",
+    "apellido": "Castro",
+    "cedula": "25563006",
+    "email": "juacastropa@unal.edu.co",
+    "password": "pbkdf2_sha256$260000$mMUj0DrIK6vgtdIYepkIxN$z7Jk9Cw0+Aar7ZCFTrNN2OJt/OqEbmD544EkD6XiQAk=",
+    "create_time": "2021-10-18 13:32:00+00",
+    "miscelanea": "25367097"
+}
+
+{
+    "id": "5",
+    "username": "prueba",
+    "nombre": "nombre_prueba",
+    "apellido": "apellido__prueba",
+    "cedula": "123456789",
+    "email": "prueba@gmail.com",
+    "password": "pbkdf2_sha256$260000$mMUj0DrIK6vgtdIYep",
+    "create_time": "2021-10-18 13:32:00+00",
+    "miscelanea": "25367097"
+}
+
+
+#CREATE MISCELANEA
+{
+    "nit": "312456",
+    "nombre_misc": "Panamericana",
+    "direccion_misc": "Calle 53 - Carrera 30"
+}
+
+#CREATE PRODUCTO
+{
+    "nombre_prod": "Esfero Bic",
+    "descripcion": "Esfero Bic -Tinta gel"
+}
+
+
+#LINKS DE CONSULTA
+
+https://www.django-rest-framework.org/api-guide/serializers/#dealing-with-nested-objects
+https://www.it-swarm-es.com/es/python/django-rest-framework-post-objetos-anidados/828580158/
+https://coffeebytes.dev/django-rest-framework-y-jwt-para-autenticar-usuarios/
+
+https://bitbucket.org/ajpreciadoc/repoinventariosg6p51_be/commits/
+
+https://www.restapitutorial.com/lessons/httpmethods.html

@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "e6121ec1-c8de-426d-ad83-5844415be509",
+		"name": "AuthDepGrupo1Ciclo4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Luissa\",\r\n    \"password\":\"123456\",\r\n    \"name\": \"Renata Lopez\",\r\n    \"email\": \"luisa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "Ver todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://msauthciclocuatrodep.herokuapp.com/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "Traer 1 Usuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/userView/4/"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar 1 usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/userView/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Luisa\",\r\n    \"password\":\"123456\",\r\n    \"name\": \"Luisa Lopez\",\r\n    \"email\": \"luisa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/userView/8/"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Verify Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM3NTUwMDQwLCJqdGkiOiJiZjQ5OTA0NGE1NWM0NGMyODhmZmY0YmUyZDU0ZjQ5OSIsInVzZXJfaWQiOjh9.KSUfXSB5lknFnm2fWgyKwlNEsfbZ9oFoNNvT9DnCOkQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/verifyToken/"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNzYzNjEwNiwianRpIjoiOTExNDhmOTZiYWZhNGM1ZGFiYWY3NWVkOTNkNjA4NzgiLCJ1c2VyX2lkIjo4fQ.M2d37wiAK3MDPFvjg8pfgYcPjyrSrB6hNq48dCLUCwU\" \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/refresh/"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Luisa\",\r\n    \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://msauthciclocuatrodep.herokuapp.com/login/"
+			},
+			"response": []
+		}
+	]
+}

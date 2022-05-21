@@ -1,0 +1,5 @@
+from .empleadoSerializer import EmpleadoSerializer
+from .miscelaneaSerializer import MiscelaneaSerializer
+from .productoSerializer import ProductoSerializer
+from .inventarioSerializer import InventarioSerializer
+

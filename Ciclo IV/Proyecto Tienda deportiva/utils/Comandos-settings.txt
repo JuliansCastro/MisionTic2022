@@ -1,0 +1,52 @@
+[Grabaciones de clases]:                    https://drive.google.com/drive/folders/1Dn2ZN6G9rrdubgMYwTohoJHO1L00s_5b
+
+Get-ExecutionPolicy --> Restricted, AllSigned, RemoteSigned, Unrestricted
+
+link: https://www.sciencedirect.com/topics/computer-science/execution-policy
+
+# Comandos principales en terminal:
+[Crear entorno virtual]:                    python -m venv env
+[Iniciar entorno virtual]:                  env\Scripts\activate
+[Cerrar entorno virtual]:                   deactivate
+
+[Instalar requirements]:                    pip install -r requirements.txt
+[Instalar django]:                          pip install django
+[Instalar rest framework django]:           pip install djangorestframework
+[Instalar djangorestframework-simplejwt]:   pip install djangorestframework-simplejwt
+[Instalar deplying guinicorn]:              pip install gunicorn
+[Instalar administrador de datos postgres]: pip install psycopg2
+[Instalar django-heroku]:                   pip install django-heroku
+
+[Crear proyecto Django]:                    django-admin startproject authProject
+[Crea app Django]:                          django-admin startapp authApp
+[Crear migraciones]:                        python manage.py makemigrations InventoriesApp
+[Aplicar migraciones]:                      python manage.py migrate
+[Correr app]:                               python manage.py runserver
+[Ver versiones de los paquetes]:            pip freeze
+
+# Deploy directly Heroku cmd - Install Heroku CLI
+[Heroku login]:                             heroku login
+[Ingresar a la carpeta del proyecto]:       cd C:\Users\Usuario\Documents\Python\Ciclo3MisionTIC\proy_banco
+[Agregar todos los cambios- git]:           git add .
+[Agregar commit]:                           git commit -am "make it better"
+[Empujar cambios a rama principal]:         git push heroku master
+
+[En archivo settings.py]: 
+
+# Deploy on Heroku using Docker (run Docker service before)
+[Login]:                                    heroku login
+[Conectar servicio Docker]:     heroku container:login
+[Crear imagen del proyecto]:                heroku container:push web --app <nombre-app>
+[REalizar despliegue]:                      heroku container:release web --app <nombre-app>
+[Ejemplo]:                                  heroku container:release web --app msinventoriesciclocuatro
+
+
+#LINKS DE CONSULTA
+
+https://www.django-rest-framework.org/api-guide/serializers/#dealing-with-nested-objects
+https://www.it-swarm-es.com/es/python/django-rest-framework-post-objetos-anidados/828580158/
+https://coffeebytes.dev/django-rest-framework-y-jwt-para-autenticar-usuarios/
+
+https://bitbucket.org/ajpreciadoc/repoinventariosg6p51_be/commits/
+
+https://www.restapitutorial.com/lessons/httpmethods.html

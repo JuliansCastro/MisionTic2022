@@ -1,0 +1,51 @@
+
+C:\Users\Usuario\Documents\Python\Ciclo3MisionTIC\proy_banco>git push heroku master
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (44/44), 13.98 KiB | 421.00 KiB/s, done.
+Total 44 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote: -----> No Python version was specified. Using the same version as the last build: python-3.9.7
+remote:        To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache
+remote: -----> Using cached install of python-3.9.7
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        161 static files copied to '/tmp/build_d6c07c90/staticfiles', 505 post-processed.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 63.8M
+remote: -----> Launching...
+remote:        Released v7
+remote:        https://banco-p51.herokuapp.com/ deployed to Heroku
+remote:
+remote:  !
+remote:  ! ## Warning - The same version of this code has already been built: 4ad054cfd8df24b7cc936dc7dbbec3c259b20881
+remote:  !
+remote:  ! We have detected that you have triggered a build from source code with version 4ad054cfd8df24b7cc936dc7dbbec3c259b20881
+remote:  ! at least twice. One common cause of this behavior is attempting to deploy code from a different branch.
+remote:  !
+remote:  ! If you are developing on a branch and deploying via git you must run:
+remote:  !
+remote:  !     git push heroku <branchname>:main
+remote:  !
+remote:  ! This article goes into details on the behavior:
+remote:  !   https://devcenter.heroku.com/articles/duplicate-build-version
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/banco-p51.git
+ * [new branch]      master -> master
+
+C:\Users\Usuario\Documents\Python\Ciclo3MisionTIC\proy_banco>
